@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Main = () => {
   const [user, setUser] = useState('')
   return (
-    <div className="flex items-center justify-center h-screen flex-col">
+    <div className="flex items-center justify-center h-screen flex-col bg-gray-100">
       <h4 className="mb-3 text-3xl">User`s repository search</h4>
       <input
         id="input-field"
