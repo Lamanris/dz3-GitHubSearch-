@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './header'
 
 const RepoList = ({ repoList, userName }) => {
+  const [search, setSearch] = useState('')
+  const repoSearch = repoList.filter((repo) => repo.name.includes(search))
   return (
     <div>
       <Header userName={userName} userAvatar={repoList.map((el) => el.owner.avatar_url)} />
-      {repoList.map((repo) => {
+      <input
+        type="text"
+        placeholder="Search"
+        className="border-solid border-2 border-gray-500 outline-none text-gray-700 m-auto flex mt-5 p-1 rounded"
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      {repoSearch.map((repo) => {
         return (
           <div
             key={repo.id}

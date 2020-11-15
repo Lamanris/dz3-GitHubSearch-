@@ -8,26 +8,26 @@ const Header = ({ userName, userAvatar, repositoryName }) => {
         <div>
           <div className="flex items-center flex-shrink-0 text-white">
             <img className=" h-16 rounded" src={`${userAvatar}`} alt="" />
-            <span className="font-semibold text-3xl tracking-tight ml-3">{userName}</span>
+            <span className="font-semibold text-3xl tracking-tight ml-3 uppercase">{userName}</span>
           </div>
         </div>
         <div>
-          <Link
-            to="/"
-            id="go-back"
-            className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-600 hover:bg-white mt-4 lg:mt-0 mr-3"
-          >
-            Back to Main
-          </Link>
           {repositoryName && (
             <Link
               to={`/${userName}`}
               id="go-back"
-              className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-600 hover:bg-white mt-4 lg:mt-0"
+              className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-600 hover:bg-white mt-4 lg:mt-0 mr-3"
             >
               Back to Repos
             </Link>
           )}
+          <Link
+            to="/"
+            id="go-back"
+            className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-600 hover:bg-white mt-4 lg:mt-0"
+          >
+            Back to Main
+          </Link>
         </div>
       </nav>
     </div>

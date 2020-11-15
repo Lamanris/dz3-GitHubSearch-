@@ -4,3 +4,30 @@
 /* purgecss end ignore */
 
 @tailwind utilities;
+
+h2 {
+  font-size: 20px;
+  color: dimgray;
+}
+h1 {
+  font-size: 30px;
+  color: #4a5568;
+  margin-bottom: 15px;
+}
+ul {
+  margin-left: 100px;
+}
+li {
+  color: darkcyan;
+}
+p {
+  font-size: 16px;
+  color: darkcyan;
+  margin-bottom: 15px;
+}
+.markdown-body {
+  padding: 10px 24px 24px;
+}
+pre {
+  color: rebeccapurple;
+}
